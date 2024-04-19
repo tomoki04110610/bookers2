@@ -1,11 +1,11 @@
 <h1>Book detail</h1>
 <%= form_with modele: @book do |f| %>
   <label for="book_title">Title</label>
-  <%= f.text_fild :title, autofoucus: true %>
+  <%= f.text_field :title %>
   <label fot="book_opinion">Opinion</label>
   <%= f.text_area :body %>
   <%= f.submit "Update Book" %>
 <% end %>
 <%= link_to "show", book_path %>
-"|"
+|
 <%= link_to "Back", books_path %>
