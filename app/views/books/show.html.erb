@@ -1,5 +1,5 @@
 <h1>Book detail</h1>
 <%= image_tag @book.user.profile_image, size: "100x100" %>
-<%= @book.user.id %>
-<%= @book.title %>
+<%= @book.user.name %>
+<%= link_to @book.title, book_path %>
 <%= @book.body %>
