@@ -1,5 +1,5 @@
 <h1>Books</h1>
-<%= @books.each do |book| %>
+<% @books.each do |book| %>
   <%= image_tag book.user.profile_image, size: "80x80" %>
   <%= link_to book.title, book_path(book) %>
   <%= book.body %>
