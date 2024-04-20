@@ -1,5 +1,5 @@
 <h1>Book detail</h1>
-<% if user.profile_image.attached? %>
+<% if @book.user.profile_image.attached? %>
   <%= image_tag @book.user.profile_image, size: "100x100" %>
 <% else %>
   <%= image_tag 'no_image', size: "80x80" %>

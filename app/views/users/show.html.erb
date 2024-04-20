@@ -1,8 +1,8 @@
 <h1>Books</h1>
+<label for="book_title">Title</label>
+<label for="book_opinion">Opinion</label>
 <% @books.each do |book| %>
   <%= image_tag book.user.profile_image, size: "80x80" %>
-  <label for="book_title">Title</label>
   <%= link_to book.title, book_path %>
-  <label for="book_opinion">Opinion</label>
   <%= book.body %>
 <% end %>
