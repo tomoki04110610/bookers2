@@ -1,12 +1,12 @@
 <h1>User info</h1>
 
-<% if current_user == user %>
+
   <%= image_tag user.profile_image, size: "100x100" %>
   <h4>name</h4>
   <%= user.name %>
   <h4>introduction</h4>
   <%= user.introduction %>
-  <%= link_to_if current_user == user, edit_user_path(user), user_path(user) do %>
+  <%= link_to edit_user_path(user), class: "btn btn-outline-secondary" do %>
     <i class="fa-solid fa-user-gear"></i>
   <% end %>
-<% end %>
+
