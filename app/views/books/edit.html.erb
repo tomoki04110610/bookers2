@@ -4,7 +4,7 @@
   <%= f.text_field :title, value: @book.title %>
   <label fot="book_opinion">Opinion</label>
   <%= f.text_area :body, value: @book.body %>
-  <%= f.submit "Update Book" %>
+  <%= f.submit "Update Book", class: "btn btn-success" %>
 <% end %>
 <%= link_to "show", book_path %>
 |
