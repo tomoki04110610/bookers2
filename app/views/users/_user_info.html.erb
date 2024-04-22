@@ -1,6 +1,6 @@
 <h1>User info</h1>
   <%= image_tag user.profile_image, size: "100x100" %>
-  <table table "table-striped">
+  <table class="table table-striped">
     <tbody>
       <tr>
         <td><h4>name</h4></td>
@@ -13,12 +13,11 @@
     </tbody>
   </table>
   <% if user == current_user %>
-    <%= link_to edit_user_path(user), class: "btn btn-outline-secondary" do %>
+    <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block" do %>
       <i class="fa-solid fa-user-gear"></i>
     <% end %>
   <% else %>
-    <%= link_to user_path(current_user.id), class: "btn btn-outline-secondary" do %>
+    <%= link_to user_path(current_user.id), class: "btn btn-outline-secondary btn-block" do %>
       <i class="fa-solid fa-user-gear"></i>
     <% end %>
   <% end %>
-</div>
