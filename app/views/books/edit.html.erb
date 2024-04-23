@@ -1,3 +1,4 @@
+<%= flash[:notice] %>
 <h1>Book detail</h1>
 <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
   <label for="book_title">Title</label>
