@@ -23,6 +23,7 @@ class UsersController < ApplicationController
       redirect_to user_path(@user)
     else
       flash.now[:notice] ="error"
+      @user = User.find(params[:id])
       render :edit
     end
   end
