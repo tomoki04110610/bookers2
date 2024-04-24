@@ -11,6 +11,9 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id)
     else
       flash.now[:notice] = "error"
+      @books = Book.all
+      @user = User.find(current_user.id)
+      @booknew = Book.new
       render :index
     end
   end
