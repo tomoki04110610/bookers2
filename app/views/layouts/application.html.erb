@@ -16,34 +16,35 @@
       <% if user_signed_in? %>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex">
           <div class="container d-flex">
+
             <span class="navbar-brand">
-              <%= link_to "Bookers", root_path %>
+              <%= link_to "Bookers", root_path,class: "nav-link text-light" %>
             </span>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item text-ligth">
-                  <%= link_to user_path(current_user) do %>
-                    <i class="fa-solid fa-house" style="color: #ffffff;"></i>Home
+            <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto d-flex">
+                <li class="nav-item ">
+                  <%= link_to user_path(current_user),class: "nav-link text-light" do %>
+                    <i class="fa-solid fa-house"></i>Home
                   <% end %>
                 </li>
                 <li class="nav-item text-ligth">
-                  <%= link_to users_path do %>
-                    <i class="fa-solid fa-users" style="color: #ffffff;"></i>Users
+                  <%= link_to users_path,class: "nav-link text-light" do %>
+                    <i class="fa-solid fa-users"></i>Users
                   <% end %>
                 </li>
                 <li class="nav-item text-ligth">
-                  <%= link_to books_path do %>
-                    <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>Books
+                  <%= link_to books_path,class: "nav-link text-light" do %>
+                    <i class="fa-solid fa-book-open"></i>Books
                   <% end %>
                 </li>
                 <li class="nav-item text-ligth">
-                  <%= link_to destroy_user_session_path, method: :delete do %>
-                    <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>Log out
+                  <%= link_to destroy_user_session_path, method: :delete,class: "nav-link text-light" do %>
+                    <i class="fa-solid fa-right-from-bracket"></i>Log out
                   <% end %>
                 </li>
               </ul>
@@ -54,7 +55,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex">
           <div class="container d-flex">
             <span class="navbar-brand">
-              <%= link_to "Bookers", root_path %>
+              <%= link_to "Bookers", root_path,class: "nav-link text-light" %>
             </span>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,23 +65,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item text-ligth">
-                  <%= link_to root_path do %>
-                    <i class="fa-solid fa-house" style="color: #ffffff;"></i>Home
+                  <%= link_to root_path,class: "nav-link text-light" do %>
+                    <i class="fa-solid fa-house"></i>Home
                   <% end %>
                 </li>
                 <li class="nav-item text-ligth">
-                  <%= link_to about_path do %>
-                    <i class="fa-solid fa-link" style="color: #ffffff;"></i>About
+                  <%= link_to about_path,class: "nav-link text-light" do %>
+                    <i class="fa-solid fa-link"></i>About
                   <% end %>
                 </li>
                 <li class="nav-item text-ligth">
-                  <%= link_to new_user_registration_path do %>
-                    <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>Sign up
+                  <%= link_to new_user_registration_path,class: "nav-link text-light" do %>
+                    <i class="fa-solid fa-user-plus"></i>Sign up
                   <% end %>
                 </li>
                 <li class="nav-item text-ligth">
-                  <%= link_to new_user_session_path do %>
-                    <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i>Log in
+                  <%= link_to new_user_session_path,class: "nav-link text-light" do %>
+                    <i class="fa-solid fa-right-to-bracket"></i>Log in
                   <% end %>
                 </li>
               </ul>
@@ -89,11 +90,15 @@
         </nav>
       <% end %>
     </header>
-
+  <main>
     <%= yield %>
-
+  </main>
     <foot>
-      <p style="text-align: center">CopyRight Infratop.inc</p>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="mx-auto">CopyRight Infratop.inc</div>
+        </div>
+      </div>
     </foot>
   </body>
 </html>
