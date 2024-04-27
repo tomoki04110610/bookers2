@@ -4,8 +4,8 @@
       <%= render "/users/user_info", user: @user %>
       <%= render "new", book: @book %>
     </div>
-    <div class="offset-md-1"></div>
-    <div class="col-md-8">
+
+    <div class="col-md-8 offset-md-1">
       <% if @book.errors.any? %>
         <%= @book.errors.count %>errors prohibited this obj from being saved:
         <ul>
